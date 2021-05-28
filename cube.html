@@ -72,17 +72,23 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
+    
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        effect: "cube",
-        grabCursor: true,
-        cubeEffect: {
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        },
-        pagination: {
+        var swiper = new Swiper(".mySwiper", {
+            effect: "cube",
+            slidesPerView: 1,
+            spaceBetween: 30,
+        loop: true,
+            grabCursor:true,
+            cubeEffect: {
+                shadow:true,
+                slideShadow:true,
+                shadowOffset:20,
+                shadowScale:0.94,},
+            autoplay: {
+          delay: 1000,
+          disableOnInteraction: false,
+        },pagination: {
           el: ".swiper-pagination",
         },
       });
