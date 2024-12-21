@@ -18,7 +18,7 @@ node {
     version = '19.6.1'
     npmVersion = '9.1.0'
     download = true
-    nodeModulesDir = file('src/ui')
+    nodeModulesDir = file('./')
 }
 
 configurations {
@@ -46,7 +46,7 @@ tasks.named('test') {
 }
 
 tasks.named('npmInstall') {
-    workingDir = file('src/ui')
+    workingDir = file('./')
 }
 
 tasks.register('npmRunBuild', NpmTask) {
@@ -54,11 +54,11 @@ tasks.register('npmRunBuild', NpmTask) {
     description = 'Build the frontend'
     dependsOn tasks.named('npmInstall')
     args = ['run', 'build']
-    workingDir = file('src/ui')
+    workingDir = file('./')
 }
 
 tasks.register('copyBuildFiles', Copy) {
-    from 'src/ui/build'
+    from 'build'
     into 'build/resources/main/static'
 }
 

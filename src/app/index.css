@@ -1,0 +1,157 @@
+.header-link {
+    color: #000;
+    text-decoration: none;
+    font-family: Raleway, sans-serif;
+}
+
+table {
+    background: #34495E;
+    color: #fff;
+    border-radius: .4em;
+    overflow: hidden;
+    width: 100%;
+    margin: .1em 0;
+    min-width: 300px;
+}
+
+tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    display: none;
+}
+
+td {
+    display: block;
+}
+
+td:first-child {
+    padding-top: .2em;
+}
+
+td:last-child {
+    padding-bottom: .2em;
+}
+
+td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    width: .5em;
+    display: inline-block;
+}
+
+@media (min-width: 480px) {
+    td:before {
+        display: none;
+    }
+
+    th,
+    td {
+        text-align: left;
+        display: table-cell;
+        padding: .2em .1em;
+    }
+
+    td:first-child {
+        padding-left: 0;
+    }
+
+    td:last-child {
+        padding-right: 0;
+    }
+}
+
+body {
+    padding: 0 .5em;
+    font-family: Montserrat, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #444;
+    background: #eee;
+}
+
+h1 {
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: #34495E;
+}
+
+{
+    background: #34495E
+;
+    color: #fff
+;
+    border-radius: .4em
+;
+    overflow: hidden
+;
+}
+
+tr {
+    border-color: #5c6f7c;
+}
+
+th,
+td {
+    margin: .5em 1em;
+}
+
+@media (min-width: 480px) {
+    th,
+    td {
+        padding: .5em !important;
+    }
+}
+
+th,
+td:before {
+    color: #dd5;
+}
+
+
+nav {
+    display: block;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #ffce54;
+    color: black;
+    border-radius: 3px;
+}
+
+nav a[data-discover="true"] {
+    font-style: normal;
+    text-transform: uppercase;
+}

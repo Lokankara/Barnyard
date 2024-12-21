@@ -7,6 +7,6 @@ RUN mvn clean package -DskipTests -Dmaven
 # Run stage	
 FROM openjdk:21-slim
 
-COPY --from=build /target/barnyarn-0.0.1-SNAPSHOT.jar hotel.jar
+COPY --from=build /target/barnyard-0.0.1-SNAPSHOT.jar barnyard.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","hotel.jar"]
+ENTRYPOINT ["java","-jar","barnyard.jar"]
